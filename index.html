@@ -221,6 +221,20 @@ section { padding-block: clamp(56px, 9vw, 104px); }
 .plan li { display: flex; gap: 12px; align-items: flex-start; }
 .plan li svg { width: 20px; height: 20px; color: var(--green); flex: none; margin-top: 3px; }
 .plan .btn { width: 100%; min-height: 58px; font-size: 18px; }
+.countdown {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: var(--mint);
+  border: 1px solid #cfead8;
+  color: var(--green-strong);
+  font: 700 11px/1.2 var(--font-body);
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
 .secure { text-align: center; color: var(--muted); font-size: 14px; line-height: 1.5; }
 
 footer.site { padding-block: 36px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
@@ -452,9 +466,10 @@ footer.site .credit:hover { text-decoration: underline; }
           <span class="plan-name">Pack completo</span>
           <div class="price">
             <span class="cur">R$</span>
-            <span class="val" id="price-val">13</span>
+            <span class="val" id="price-val">19,90</span>
             <span class="once">pagamento único</span>
           </div>
+          <div id="countdown" class="countdown" aria-live="polite">Promo termina em 22:00:00</div>
         </div>
         <ul>
           <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>200 cards para estudos, redes sociais e trabalhos</li>
@@ -484,14 +499,58 @@ footer.site .credit:hover { text-decoration: underline; }
 
 <script>
   // Configure aqui o valor e o link de checkout do Wiapy.
-  var PRECO = "13";
+  var PRECO = "19,90";
+  var PRECO_NORMAL = "59,90";
   var CHECKOUT_URL = "https://pay.wiapy.com/MiNTCvNSq-PC";
+  var PROMO_DURATION_MS = 22 * 60 * 60 * 1000;
+  var PROMO_KEY = "radiologia-promo-expire";
+
+  function formatCountdown(ms) {
+    var totalSeconds = Math.max(0, Math.ceil(ms / 1000));
+    var hours = Math.floor(totalSeconds / 3600);
+    var minutes = Math.floor((totalSeconds % 3600) / 60);
+    var seconds = totalSeconds % 60;
+    return [hours, minutes, seconds].map(function (n) {
+      return String(n).padStart(2, "0");
+    }).join(":");
+  }
+
+  function getExpiryTimestamp() {
+    try {
+      var saved = Number(localStorage.getItem(PROMO_KEY));
+      if (saved && saved > Date.now()) return saved;
+    } catch (error) {}
+
+    var next = Date.now() + PROMO_DURATION_MS;
+    try {
+      localStorage.setItem(PROMO_KEY, String(next));
+    } catch (error) {}
+    return next;
+  }
+
+  function updatePriceState() {
+    var val = document.getElementById("price-val");
+    var countdown = document.getElementById("countdown");
+    var expiry = getExpiryTimestamp();
+    var remaining = expiry - Date.now();
+
+    if (remaining > 0) {
+      if (val) val.textContent = PRECO;
+      if (countdown) countdown.textContent = "Promo termina em " + formatCountdown(remaining);
+      return true;
+    }
+
+    if (val) val.textContent = PRECO_NORMAL;
+    if (countdown) countdown.textContent = "Preço normal: R$ 59,90";
+    try { localStorage.removeItem(PROMO_KEY); } catch (error) {}
+    return false;
+  }
 
   (function () {
     var val = document.getElementById("price-val");
     if (val) val.textContent = PRECO;
     var buy = document.getElementById("checkout");
-    buy.setAttribute("href", CHECKOUT_URL);
+    if (buy) buy.setAttribute("href", CHECKOUT_URL);
     if (CHECKOUT_URL.indexOf("http") === 0) {
       document.querySelectorAll(".js-checkout").forEach(function (a) {
         a.setAttribute("href", CHECKOUT_URL);
@@ -499,6 +558,9 @@ footer.site .credit:hover { text-decoration: underline; }
         a.setAttribute("rel", "noopener");
       });
     }
+
+    updatePriceState();
+    window.setInterval(updatePriceState, 1000);
 
     var track = document.getElementById("track");
     var prev = document.getElementById("prev");
