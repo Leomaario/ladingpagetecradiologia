@@ -10,28 +10,29 @@ body{margin:0}
 img{max-width:100%}
 [hidden]{display:none!important}
 </style>
-<title>Tec. Radiologia - souzalink</title>
+<title>200 Cards de Radiologia | Pack para estudar e compartilhar</title>
+<meta name="description" content="Estude radiologia com mais clareza. Pack com 200 cards prontos para revisar conteúdos e compartilhar conhecimento. Pagamento único.">
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
 <style>
 /* Layout: página branca de venda, hero em duas colunas com pilha de cards reais, carrossel em faixa verde clara, plano único no fim. Tema claro por escolha. */
 :root {
-  --bg: #FFFFFF;
-  --band: #F1F8F3;
+  --bg: #FCFDFC;
+  --band: #F1F7F3;
   --surface: #FFFFFF;
   --ink: #0D2B1E;
   --muted: #4A6256;
-  --line: #DCEAE0;
-  --green: #17894A;
+  --line: #DCE8E0;
+  --green: #16834A;
   --green-strong: #0E5A33;
-  --mint: #E2F4E9;
-  --btn-bg: #17894A;
+  --mint: #E7F5EB;
+  --btn-bg: #126C3B;
   --btn-ink: #FFFFFF;
-  --btn-hover: #0E6E3A;
-  --deep-bg: #0E3B26;
+  --btn-hover: #0A512D;
+  --deep-bg: #0B3020;
   --deep-ink: #E8F4EC;
-  --deep-accent: #6BDC9B;
-  --shadow: 0 1px 2px rgba(13, 43, 30, .06), 0 14px 34px -12px rgba(13, 43, 30, .28);
+  --deep-accent: #8BE0AD;
+  --shadow: 0 12px 30px -14px rgba(13, 43, 30, .24), 0 2px 6px rgba(13, 43, 30, .06);
   --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
   --font-body: "Figtree", "Segoe UI", system-ui, sans-serif;
   color-scheme: light;
@@ -94,9 +95,10 @@ section { padding-block: clamp(56px, 9vw, 104px); }
   font: 700 17px/1 var(--font-body);
   text-decoration: none;
   cursor: pointer;
-  transition: background .2s, transform .2s;
+  box-shadow: 0 8px 18px -8px rgba(14, 90, 51, .55);
+  transition: background .2s, transform .2s, box-shadow .2s;
 }
-.btn:hover { background: var(--btn-hover); transform: translateY(-1px); }
+.btn:hover { background: var(--btn-hover); transform: translateY(-2px); box-shadow: 0 12px 24px -8px rgba(14, 90, 51, .5); }
 .btn.ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--line); }
 .btn.ghost:hover { background: var(--mint); }
 .btn.small { min-height: 42px; padding: 0 20px; font-size: 15px; }
@@ -109,10 +111,22 @@ section { padding-block: clamp(56px, 9vw, 104px); }
   background: color-mix(in srgb, var(--bg) 92%, transparent);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
+  box-shadow: 0 4px 18px rgba(13, 43, 30, .04);
 }
-.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; }
-.brand { display: flex; align-items: center; gap: 10px; font: 800 19px/1 var(--font-display); letter-spacing: -0.02em; text-decoration: none; }
-.brand svg { width: 30px; height: 30px; flex: none; }
+.top::after { content: ""; position: absolute; inset: auto 0 0; height: 2px; background: linear-gradient(90deg, transparent, #8BCDA2 28%, var(--green) 50%, #8BCDA2 72%, transparent); opacity: .65; }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 28px; min-height: 74px; }
+.brand { display: inline-flex; align-items: center; gap: 11px; flex: none; text-decoration: none; }
+.brand svg { width: 38px; height: 38px; flex: none; filter: drop-shadow(0 3px 5px rgba(14, 90, 51, .12)); }
+.brand-copy { display: grid; gap: 4px; }
+.brand-name { font: 800 19px/1 var(--font-display); letter-spacing: -.035em; }
+.brand-caption { color: var(--muted); font: 700 9px/1 var(--font-body); letter-spacing: .14em; text-transform: uppercase; }
+.top-nav { display: flex; align-items: center; justify-content: flex-end; gap: clamp(18px, 2.5vw, 36px); margin-left: auto; }
+.top-nav a { position: relative; color: var(--muted); font-size: 15px; font-weight: 600; text-decoration: none; transition: color .2s; }
+.top-nav a::after { content: ""; position: absolute; right: 0; bottom: -7px; left: 0; height: 2px; transform: scaleX(0); transform-origin: left; background: var(--green); transition: transform .2s; }
+.top-nav a:hover { color: var(--green-strong); }
+.top-nav a:hover::after { transform: scaleX(1); }
+.top-contact { min-height: 44px; padding-inline: 18px; border-radius: 12px; white-space: nowrap; font-size: 14px; }
+.top-contact svg { width: 17px; height: 17px; flex: none; }
 
 /* Imagens dos cards */
 .shot {
@@ -126,9 +140,10 @@ section { padding-block: clamp(56px, 9vw, 104px); }
 }
 
 /* Hero */
-.hero { padding-block: clamp(40px, 7vw, 88px) clamp(48px, 7vw, 88px); }
-.hero .wrap { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(32px, 5vw, 64px); align-items: center; }
-.hero-copy { display: grid; gap: 24px; min-width: 0; }
+.hero { position: relative; isolation: isolate; overflow: hidden; padding-block: clamp(56px, 8vw, 104px); background: linear-gradient(115deg, #F5FAF6 0%, #FFFFFF 55%, #EDF7F0 100%); }
+.hero::before { content: ""; position: absolute; z-index: -1; width: min(58vw, 760px); aspect-ratio: 1; right: -15%; top: -40%; border-radius: 50%; background: radial-gradient(circle, rgba(111, 202, 143, .18), rgba(111, 202, 143, 0) 68%); pointer-events: none; }
+.hero .wrap { position: relative; display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(32px, 5vw, 64px); align-items: center; }
+.hero-copy { display: grid; gap: 24px; min-width: 0; animation: rise-in .7s both; }
 .hero h1 { font-size: clamp(40px, 6.4vw, 70px); font-weight: 800; }
 .hero h1 em { font-style: normal; color: var(--green); }
 .hero .lead { font-size: clamp(18px, 2vw, 21px); color: var(--muted); max-width: 520px; }
@@ -137,22 +152,73 @@ section { padding-block: clamp(56px, 9vw, 104px); }
 .assure li { display: flex; align-items: center; gap: 8px; }
 .assure svg { width: 18px; height: 18px; color: var(--green); flex: none; }
 
-.stack { position: relative; height: 470px; min-width: 0; }
+.stack { position: relative; height: 470px; min-width: 0; animation: rise-in .85s .1s both; }
+.stack::before { content: ""; position: absolute; width: 76%; aspect-ratio: 1; left: 12%; top: 10%; border-radius: 50%; background: radial-gradient(circle, rgba(89, 175, 118, .22), rgba(89, 175, 118, 0) 70%); filter: blur(8px); }
 .stack .shot { position: absolute; top: 24px; left: calc(50% - 115px); width: 230px; }
+.stack .shot { border: 5px solid rgba(255,255,255,.92); box-shadow: 0 24px 48px -16px rgba(13, 43, 30, .34), 0 5px 14px rgba(13, 43, 30, .12); }
 .stack .shot:nth-child(1) { transform: translateX(-84px) rotate(-8deg); }
 .stack .shot:nth-child(2) { transform: translateX(84px) rotate(7deg) translateY(34px); }
 .stack .shot:nth-child(3) { transform: translateY(-8px); z-index: 2; }
 
 /* O que você vai querer */
 .uses { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.use { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 30px; display: grid; gap: 16px; align-content: start; min-width: 0; }
-.use .ico { width: 52px; height: 52px; border-radius: 14px; background: var(--mint); color: var(--green-strong); display: grid; place-items: center; }
+.use { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 30px; display: grid; gap: 16px; align-content: start; min-width: 0; box-shadow: 0 2px 8px rgba(13, 43, 30, .025); transition: transform .25s, box-shadow .25s, border-color .25s; }
+.use:hover { transform: translateY(-5px); border-color: #B8D8C2; box-shadow: var(--shadow); }
+.use .ico { width: 52px; height: 52px; border-radius: 14px; background: var(--mint); color: var(--green-strong); display: grid; place-items: center; transition: transform .25s, background .25s; }
+.use:hover .ico { transform: scale(1.06); background: #D8EFDF; }
 .use .ico svg { width: 26px; height: 26px; }
 .use h3 { font-size: 26px; font-weight: 700; }
 .use p { color: var(--muted); font-size: 16px; }
 .use ul { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 10px; font-size: 16px; }
 .use li { display: flex; gap: 10px; align-items: flex-start; }
 .use li svg { width: 18px; height: 18px; color: var(--green); margin-top: 4px; flex: none; }
+
+/* Visor anatômico interativo */
+.anatomy-band { position: relative; overflow: hidden; background: linear-gradient(180deg, #F1F7F3, #FCFDFC 78%); }
+.anatomy-band .section-head { max-width: 700px; }
+.anatomy-viewer { display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; border: 1px solid rgba(144, 196, 163, .32); border-radius: 26px; background: #0A1826; box-shadow: 0 28px 64px -32px rgba(8, 32, 48, .55); }
+.xray-screen { position: relative; display: grid; min-height: 500px; place-items: center; overflow: hidden; background: radial-gradient(ellipse at 50% 46%, #1B3C4B 0, #102637 45%, #091723 100%); }
+.xray-screen::before { content: ""; position: absolute; inset: 0; opacity: .2; background-image: linear-gradient(rgba(147, 222, 242, .1) 1px, transparent 1px), linear-gradient(90deg, rgba(147, 222, 242, .1) 1px, transparent 1px); background-size: 32px 32px; mask-image: linear-gradient(transparent, #000 18%, #000 82%, transparent); pointer-events: none; }
+.xray-screen::after { content: ""; position: absolute; inset: 18px; border: 1px solid rgba(180, 226, 239, .11); border-radius: 16px; pointer-events: none; }
+.viewer-status { position: absolute; z-index: 2; top: 28px; left: 30px; display: inline-flex; align-items: center; gap: 9px; color: #D9EAF0; font: 700 10px/1 var(--font-body); letter-spacing: .14em; }
+.viewer-status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #7CE2B0; box-shadow: 0 0 12px rgba(124, 226, 176, .8); }
+.viewer-counter { position: absolute; z-index: 2; top: 26px; right: 30px; color: #9CB6C1; font: 600 11px/1 var(--font-body); letter-spacing: .12em; }
+.xray-stage { position: relative; width: min(100%, 370px); height: 460px; margin-top: 26px; }
+.skeleton-art { display: block; width: 100%; height: 100%; overflow: visible; }
+.skeleton-art [data-bone] { fill: none; stroke: #B5E5F0; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; opacity: .82; transition: opacity .25s, filter .25s, stroke .25s; }
+.skeleton-art [data-bone="spine"] { stroke-width: 2.4; }
+.skeleton-art [data-bone="limbs"] { stroke-width: 3.2; }
+.skeleton-art [data-bone="skull"] { fill: rgba(181, 229, 240, .08); }
+.skeleton-art [data-bone="skull"] path:not(:first-child) { fill: none; }
+.skeleton-art [data-bone="skull"] circle { fill: rgba(181, 229, 240, .18); }
+.skeleton-art [data-bone="pelvis"] { fill: rgba(181, 229, 240, .06); }
+.skeleton-art [data-bone].is-active { stroke: #D6FAFF; opacity: 1; filter: drop-shadow(0 0 5px rgba(118, 223, 246, .78)); }
+.skeleton-art [data-bone="skull"].is-active,
+.skeleton-art [data-bone="pelvis"].is-active { fill: rgba(118, 223, 246, .16); }
+.xray-screen[data-active="skull"] .skeleton-art [data-bone]:not([data-bone="skull"]),
+.xray-screen[data-active="thorax"] .skeleton-art [data-bone]:not([data-bone="thorax"]),
+.xray-screen[data-active="spine"] .skeleton-art [data-bone]:not([data-bone="spine"]),
+.xray-screen[data-active="limbs"] .skeleton-art [data-bone]:not([data-bone="limbs"]) { opacity: .34; }
+.anatomy-marker { position: absolute; z-index: 3; display: flex; align-items: center; gap: 7px; padding: 0; border: 0; background: none; color: #E8F8FB; font: 700 11px/1 var(--font-body); cursor: pointer; }
+.anatomy-marker::before { content: ""; width: 12px; height: 12px; flex: none; border: 2px solid #D6FAFF; border-radius: 50%; background: rgba(91, 207, 231, .35); box-shadow: 0 0 0 5px rgba(91, 207, 231, .12), 0 0 15px rgba(91, 207, 231, .7); transition: transform .2s, background .2s; }
+.anatomy-marker:hover::before, .anatomy-marker[aria-pressed="true"]::before { transform: scale(1.2); background: #8AE7F6; }
+.anatomy-marker span { padding: 7px 9px; border: 1px solid rgba(205, 239, 247, .18); border-radius: 999px; background: rgba(8, 24, 37, .82); }
+.marker-skull { top: 17%; left: 57%; }
+.marker-thorax { top: 38%; left: 58%; }
+.marker-spine { top: 54%; left: 57%; }
+.marker-limbs { top: 77%; left: 54%; }
+.anatomy-panel { display: flex; flex-direction: column; justify-content: center; padding: clamp(26px, 4vw, 48px); color: #E9F3F4; }
+.anatomy-panel .eyebrow { color: #89D9E8; font-size: 11px; }
+.anatomy-panel h3 { margin-top: 12px; font-size: clamp(28px, 3.5vw, 38px); }
+.anatomy-panel > p { margin-top: 12px; color: #ADC2C8; font-size: 15px; }
+.anatomy-choices { display: grid; gap: 8px; margin-top: 25px; }
+.anatomy-choice { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 48px; padding: 8px 12px; border: 1px solid rgba(182, 219, 228, .13); border-radius: 12px; background: rgba(255, 255, 255, .035); color: #B8CBD0; font: 600 14px/1 var(--font-body); text-align: left; cursor: pointer; transition: border-color .2s, background .2s, color .2s; }
+.anatomy-choice:hover, .anatomy-choice[aria-pressed="true"] { border-color: rgba(137, 217, 232, .52); background: rgba(73, 153, 170, .16); color: #F3FCFD; }
+.anatomy-choice .choice-number { color: #7DA5B1; font: 700 11px/1 var(--font-body); letter-spacing: .06em; }
+.anatomy-choice svg { width: 16px; height: 16px; margin-left: auto; color: #85D6E5; }
+.anatomy-note { margin-top: 20px; color: #7E9AA4; font-size: 12px; line-height: 1.5; }
+.anatomy-cta { margin-top: 20px; align-self: flex-start; background: #75D5A0; color: #092A1A; box-shadow: 0 8px 22px -10px rgba(117, 213, 160, .7); }
+.anatomy-cta:hover { background: #96E8B9; }
 
 /* Carrossel */
 .carousel-band { background: var(--band); }
@@ -174,6 +240,8 @@ section { padding-block: clamp(56px, 9vw, 104px); }
   scrollbar-color: var(--green) transparent;
 }
 .slide { flex: 0 0 min(320px, 78vw); scroll-snap-align: start; padding: 0; margin: 0; border: 0; background: none; cursor: zoom-in; border-radius: 5% / 3.5%; }
+.slide .shot { box-shadow: var(--shadow); transition: transform .25s, box-shadow .25s; }
+.slide:hover .shot { transform: translateY(-5px) scale(1.01); box-shadow: 0 22px 40px -16px rgba(13, 43, 30, .32); }
 .note { color: var(--muted); font-size: 15px; margin-top: 4px; }
 
 /* Visualização ampliada */
@@ -184,15 +252,17 @@ section { padding-block: clamp(56px, 9vw, 104px); }
 
 /* Ofertas */
 .offer { display: grid; grid-template-columns: .8fr 1.2fr; gap: 20px; align-items: stretch; }
-.offer-hero { background: var(--deep-bg); color: var(--deep-ink); border-radius: 24px; padding: clamp(28px, 4vw, 44px); display: grid; align-content: space-between; gap: 40px; min-width: 0; }
+.offer-hero { background: radial-gradient(circle at 85% 12%, rgba(116, 206, 149, .22), transparent 35%), linear-gradient(145deg, #10452D, var(--deep-bg) 75%); color: var(--deep-ink); border-radius: 24px; padding: clamp(28px, 4vw, 44px); display: grid; align-content: space-between; gap: 40px; min-width: 0; box-shadow: 0 20px 40px -20px rgba(11, 48, 32, .52); }
 .offer-hero .n { font: 800 clamp(96px, 16vw, 168px)/.85 var(--font-display); letter-spacing: -0.05em; color: var(--deep-accent); }
 .offer-hero p { font-size: 20px; max-width: 280px; opacity: .92; }
-.offer-list { display: grid; gap: 14px; min-width: 0; }
-.offer-item { display: grid; grid-template-columns: 48px 1fr; gap: 18px; align-items: start; background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 22px 24px; }
+.offer-list { display: grid; gap: 14px; min-width: 0; align-content: center; }
+.offer-item { display: grid; grid-template-columns: 48px 1fr; gap: 18px; align-items: start; background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 22px 24px; transition: transform .2s, box-shadow .2s, border-color .2s; }
+.offer-item:hover { transform: translateX(4px); border-color: #B8D8C2; box-shadow: var(--shadow); }
 .offer-item .ico { width: 48px; height: 48px; border-radius: 14px; background: var(--mint); color: var(--green-strong); display: grid; place-items: center; }
 .offer-item .ico svg { width: 24px; height: 24px; }
 .offer-item h3 { font-size: 21px; font-weight: 700; margin-bottom: 4px; }
 .offer-item p { color: var(--muted); font-size: 16px; }
+.offer-cta { justify-self: start; margin-top: 6px; }
 
 /* FAQ */
 .faq-band { background: var(--band); }
@@ -210,7 +280,8 @@ section { padding-block: clamp(56px, 9vw, 104px); }
 /* Plano */
 .plan-wrap { display: grid; justify-items: center; gap: 36px; }
 .plan-wrap .section-head { text-align: center; justify-items: center; margin-bottom: 0; }
-.plan { width: 100%; max-width: 460px; background: var(--surface); border: 2px solid var(--green); border-radius: 28px; padding: clamp(28px, 5vw, 40px); display: grid; gap: 24px; box-shadow: var(--shadow); }
+.plan { position: relative; overflow: hidden; width: 100%; max-width: 460px; background: var(--surface); border: 1px solid #B9D8C3; border-radius: 28px; padding: clamp(28px, 5vw, 40px); display: grid; gap: 24px; box-shadow: 0 24px 60px -30px rgba(14, 90, 51, .42), 0 2px 8px rgba(13, 43, 30, .05); }
+.plan::before { content: ""; position: absolute; top: 0; inset-inline: 0; height: 5px; background: linear-gradient(90deg, #0E5A33, #59B879, #B5E5C3); }
 .plan-top { display: grid; gap: 6px; }
 .plan-name { font: 700 14px/1 var(--font-body); letter-spacing: .12em; text-transform: uppercase; color: var(--green-strong); }
 .price { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; font-variant-numeric: tabular-nums; }
@@ -221,7 +292,7 @@ section { padding-block: clamp(56px, 9vw, 104px); }
 .plan li { display: flex; gap: 12px; align-items: flex-start; }
 .plan li svg { width: 20px; height: 20px; color: var(--green); flex: none; margin-top: 3px; }
 .plan .btn { width: 100%; min-height: 58px; font-size: 18px; }
-.countdown {
+.purchase-note {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -229,13 +300,16 @@ section { padding-block: clamp(56px, 9vw, 104px); }
   padding: 8px 12px;
   border-radius: 999px;
   background: var(--mint);
-  border: 1px solid #cfead8;
+  border: 1px solid #CFEAD8;
   color: var(--green-strong);
-  font: 700 11px/1.2 var(--font-body);
-  letter-spacing: .09em;
-  text-transform: uppercase;
+  font: 700 13px/1.2 var(--font-body);
 }
 .secure { text-align: center; color: var(--muted); font-size: 14px; line-height: 1.5; }
+
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 footer.site { padding-block: 36px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
 footer.site .wrap { display: flex; justify-content: space-between; gap: 8px 24px; flex-wrap: wrap; }
@@ -246,6 +320,10 @@ footer.site .credit:hover { text-decoration: underline; }
   .hero .wrap { grid-template-columns: 1fr; }
   .stack { height: 430px; order: -1; }
   .uses { grid-template-columns: 1fr; }
+  .anatomy-viewer { grid-template-columns: 1fr; }
+  .xray-screen { min-height: 450px; }
+  .xray-stage { height: 420px; }
+  .anatomy-panel { padding: 30px; }
   .offer { grid-template-columns: 1fr; }
   .offer-hero { gap: 24px; }
   .faq-grid { grid-template-columns: 1fr; }
@@ -257,14 +335,37 @@ footer.site .credit:hover { text-decoration: underline; }
   .stack .shot:nth-child(1) { transform: translateX(-68px) rotate(-8deg); }
   .stack .shot:nth-child(2) { transform: translateX(68px) rotate(7deg) translateY(28px); }
   .hero-actions .btn { width: 100%; }
-  .top .btn.small { padding: 0 16px; }
-  .brand { font-size: 17px; }
+  .top .wrap { min-height: 66px; gap: 10px; }
+  .brand { gap: 8px; }
+  .brand svg { width: 34px; height: 34px; }
+  .brand-name { font-size: 16px; }
+  .brand-caption { font-size: 8px; }
+  .top-contact { min-height: 40px; padding-inline: 11px; gap: 6px; font-size: 12px; }
+  .top-contact svg { width: 15px; height: 15px; }
+  .xray-screen { min-height: 390px; }
+  .xray-stage { height: 360px; }
+  .viewer-status { top: 25px; left: 24px; font-size: 9px; }
+  .viewer-counter { top: 24px; right: 24px; }
+  .anatomy-panel { padding: 26px 22px; }
+  .anatomy-marker { gap: 4px; font-size: 9px; }
+  .anatomy-marker::before { width: 10px; height: 10px; }
+  .anatomy-marker span { padding: 6px 7px; }
   .offer-item { grid-template-columns: 1fr; gap: 12px; }
   .faq details p { padding-right: 0; }
 }
+@media (max-width: 760px) {
+  .top .wrap { gap: 12px; }
+  .top-nav { gap: 16px; }
+  .top-nav a { font-size: 13px; }
+  .top-nav a:nth-child(4) { display: none; }
+}
+@media (max-width: 620px) {
+  .top-nav { display: none; }
+}
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .btn, .arrow, .faq summary::after { transition: none; }
+  .btn, .arrow, .faq summary::after, .use, .use .ico, .offer-item, .slide .shot, .skeleton-art [data-bone], .anatomy-marker::before, .anatomy-choice { transition: none; }
+  .hero-copy, .stack { animation: none; }
 }
 </style>
 
@@ -272,16 +373,28 @@ footer.site .credit:hover { text-decoration: underline; }
 <body>
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#inicio" aria-label="Pack 200 Cards">
+    <a class="brand" href="#inicio" aria-label="Tec. Radiologia, início">
       <svg viewBox="0 0 32 32" aria-hidden="true">
         <circle cx="16" cy="16" r="12" fill="#eafaf0" stroke="#0E5A33" stroke-width="2"/>
         <path d="M16 7v18M7 16h18" stroke="#0E5A33" stroke-width="2.5" stroke-linecap="round"/>
         <path d="M11 11c3 3 7 3 10 0M11 21c3-3 7-3 10 0" fill="none" stroke="#0E5A33" stroke-width="1.6" stroke-linecap="round" opacity="0.9"/>
         <circle cx="16" cy="16" r="2.5" fill="#0E5A33"/>
       </svg>
-      Tec. Radiologia - souzalink
+      <span class="brand-copy">
+        <span class="brand-name">Tec. Radiologia</span>
+        <span class="brand-caption">Pack de estudos</span>
+      </span>
     </a>
-    <a class="btn small js-checkout" href="#plano">Adquirir agora</a>
+    <nav class="top-nav" aria-label="Navegação principal">
+      <a href="#exemplos">Cards</a>
+      <a href="#anatomia">Anatomia</a>
+      <a href="#ofertas">O pack</a>
+      <a href="#faq">Dúvidas</a>
+    </nav>
+    <a class="btn top-contact" href="https://www.instagram.com/souzaalink/" target="_blank" rel="noopener" aria-label="Fale no Instagram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg>
+      Fale no Instagram
+    </a>
   </div>
 </header>
 
@@ -290,12 +403,12 @@ footer.site .credit:hover { text-decoration: underline; }
   <section class="hero">
     <div class="wrap">
       <div class="hero-copy">
-        <span class="eyebrow">Cards prontos para usar</span>
-        <h1>200 cards para <em>estudar, postar e trabalhar</em> sem começar do zero.</h1>
-        <p class="lead">Um pack completo para você revisar matéria, manter suas redes sociais ativas e entregar trabalhos com visual profissional.</p>
+        <span class="eyebrow">Material visual para técnico em radiologia</span>
+        <h1>200 cards para <em>estudar radiologia.</em></h1>
+        <p class="lead">Revise conteúdos com cards prontos para acessar e compartilhar. Compra única, acesso após o pagamento.</p>
         <div class="hero-actions">
-          <a class="btn" href="#plano">Quero meus 200 cards</a>
-          <a class="btn ghost" href="#exemplos">Ver exemplos</a>
+          <a class="btn js-checkout" href="#plano">Quero acessar os 200 cards</a>
+          <a class="btn ghost" href="#exemplos">Ver prévia</a>
         </div>
         <ul class="assure">
           <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Pagamento único</li>
@@ -355,13 +468,86 @@ footer.site .credit:hover { text-decoration: underline; }
     </div>
   </section>
 
+  <section class="anatomy-band" id="anatomia">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Explore a radiologia</span>
+        <h2>Um jeito mais visual de aprender anatomia.</h2>
+        <p>Toque em uma região do esqueleto e descubra alguns conceitos básicos.</p>
+      </div>
+      <div class="anatomy-viewer">
+        <div class="xray-screen" id="xray-screen" data-active="thorax">
+          <span class="viewer-status">VISUALIZADOR ANATÔMICO</span>
+          <span class="viewer-counter" id="viewer-counter">02 / 04</span>
+          <div class="xray-stage">
+            <svg class="skeleton-art" viewBox="0 0 300 500" role="img" aria-labelledby="skeleton-title skeleton-description">
+              <title id="skeleton-title">Ilustração interativa do esqueleto humano</title>
+              <desc id="skeleton-description">Representação esquemática de um esqueleto com pontos interativos no crânio, tórax, coluna e membros.</desc>
+              <g data-bone="skull">
+                <path d="M150 31c-24 0-39 18-39 43v18c0 14 8 24 20 29l5 16h28l5-16c12-5 20-15 20-29V74c0-25-15-43-39-43Z"/>
+                <path d="M126 81c2-7 8-11 15-10M174 81c-2-7-8-11-15-10M148 81l-5 19 7 3M132 108c10 7 26 7 36 0"/>
+                <circle cx="133" cy="82" r="4"/><circle cx="167" cy="82" r="4"/>
+                <path d="M140 123v8m20-8v8"/>
+              </g>
+              <g data-bone="thorax">
+                <path d="M148 139c-12-5-23-8-35-5l-20 12m59-7c12-5 23-8 35-5l20 12"/>
+                <path d="M150 145v75"/>
+                <path d="M147 151c-16-12-34-10-47 1 11 8 28 11 47 9m6-10c16-12 34-10 47 1-11 8-28 11-47 9"/>
+                <path d="M147 169c-17-12-38-10-51 2 12 9 30 12 51 9m6-11c17-12 38-10 51 2-12 9-30 12-51 9"/>
+                <path d="M147 188c-16-11-35-9-47 3 12 8 29 11 47 8m6-11c16-11 35-9 47 3-12 8-29 11-47 8"/>
+                <path d="M148 207c-13-9-29-7-39 3 10 7 23 9 39 7m4-10c13-9 29-7 39 3-10 7-23 9-39 7"/>
+                <path d="M148 222c-11-7-23-5-31 3 8 6 18 7 31 5m4-8c11-7 23-5 31 3-8 6-18 7-31 5"/>
+              </g>
+              <g data-bone="spine">
+                <path d="M150 130v190"/>
+                <path d="M143 137h14m-15 10h16m-16 11h16m-16 11h16m-16 11h16m-16 11h16m-16 11h16m-16 11h16m-16 11h16m-16 11h16m-16 11h16m-16 11h16m-16 11h16m-15 11h14m-13 11h12"/>
+                <path d="M150 318v33"/>
+              </g>
+              <g data-bone="pelvis">
+                <path d="M145 235c-13 5-24 14-30 28l7 25 17 10 11-12 11 12 17-10 7-25c-6-14-17-23-30-28"/>
+                <path d="M139 249c-8 6-12 15-12 25l12 11m22-36c8 6 12 15 12 25l-12 11m-11-10v18"/>
+              </g>
+              <g data-bone="limbs">
+                <path d="M91 148 76 160l-16 63-17 16m157-91 15 12 16 63 17 16"/>
+                <path d="m60 223-9 38m-8-22-9 35m172-51 9 38m8-22 9 35"/>
+                <path d="m43 239-7 19m15 3-7 18m193-40 7 19m-15 3 7 18"/>
+                <path d="m128 291-9 66 8 18m45-84 9 66-8 18"/>
+                <path d="m127 373-5 60 8 18m46-78 5 60-8 18"/>
+                <path d="m122 433-9 17 2 8 18 1 5-8m42-18 9 17-2 8-18 1-5-8"/>
+                <path d="M76 160 90 148m134 12-14-12"/>
+                <path d="M113 451h26m39 0h26"/>
+              </g>
+            </svg>
+            <button class="anatomy-marker marker-skull" type="button" data-region="skull" aria-label="Explorar crânio" aria-controls="anatomy-description" aria-pressed="false"><span>Crânio</span></button>
+            <button class="anatomy-marker marker-thorax" type="button" data-region="thorax" aria-label="Explorar tórax" aria-controls="anatomy-description" aria-pressed="true"><span>Tórax</span></button>
+            <button class="anatomy-marker marker-spine" type="button" data-region="spine" aria-label="Explorar coluna" aria-controls="anatomy-description" aria-pressed="false"><span>Coluna</span></button>
+            <button class="anatomy-marker marker-limbs" type="button" data-region="limbs" aria-label="Explorar membros" aria-controls="anatomy-description" aria-pressed="false"><span>Membros</span></button>
+          </div>
+        </div>
+        <div class="anatomy-panel">
+          <span class="eyebrow" id="anatomy-kicker">ESTRUTURA 02 · TÓRAX</span>
+          <h3 id="anatomy-title">Caixa torácica</h3>
+          <p id="anatomy-description" aria-live="polite">Costelas, esterno e clavículas formam a caixa torácica. As costelas se articulam com as vértebras torácicas.</p>
+          <div class="anatomy-choices" role="group" aria-label="Escolha uma região do esqueleto">
+            <button class="anatomy-choice" type="button" data-region="skull" aria-controls="anatomy-description" aria-pressed="false"><span class="choice-number">01</span>Crânio<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+            <button class="anatomy-choice" type="button" data-region="thorax" aria-controls="anatomy-description" aria-pressed="true"><span class="choice-number">02</span>Tórax<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+            <button class="anatomy-choice" type="button" data-region="spine" aria-controls="anatomy-description" aria-pressed="false"><span class="choice-number">03</span>Coluna vertebral<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+            <button class="anatomy-choice" type="button" data-region="limbs" aria-controls="anatomy-description" aria-pressed="false"><span class="choice-number">04</span>Membros<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+          </div>
+          <p class="anatomy-note">Ilustração esquemática para fins educativos; não representa um exame diagnóstico.</p>
+          <a class="btn anatomy-cta js-checkout" href="#plano">Quero ver os 200 cards</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CARROSSEL -->
   <section class="carousel-band" id="exemplos">
     <div class="wrap">
       <div class="carousel-head">
         <div class="section-head">
-          <span class="eyebrow">Carrossel</span>
-          <h2>Dê uma olhada nos cards.</h2>
+          <span class="eyebrow">Prévia do material</span>
+          <h2>Veja por dentro do pack.</h2>
           <p>Toque em um card para ver ampliado.</p>
         </div>
         <div class="arrows">
@@ -386,7 +572,7 @@ footer.site .credit:hover { text-decoration: underline; }
         <button class="slide" type="button" data-src="cards/card-18.webp" aria-label="Ampliar card 18, Ruído na Imagem"><img class="shot" src="cards/card-18.webp" alt="Card 18: Ruído na Imagem" width="900" height="1278" loading="lazy"></button>
         <button class="slide" type="button" data-src="cards/card-19.webp" aria-label="Ampliar card 19, Controle de Qualidade da Imagem"><img class="shot" src="cards/card-19.webp" alt="Card 19: Controle de Qualidade da Imagem" width="900" height="1278" loading="lazy"></button>
       </div>
-      <p class="note">Alguns dos 200 cards do pack.</p>
+      <p class="note">Uma prévia dos 200 cards incluídos no pack.</p>
     </div>
   </section>
 
@@ -394,9 +580,9 @@ footer.site .credit:hover { text-decoration: underline; }
   <section id="ofertas">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow">Ofertas</span>
-        <h2>O que você leva no pack.</h2>
-        <p>Tudo o que está incluído no pagamento único, sem mensalidade.</p>
+        <span class="eyebrow">O que está incluído</span>
+        <h2>Pronto para usar. Feito para radiologia.</h2>
+        <p>Conteúdo organizado para estudar, publicar e apresentar.</p>
       </div>
       <div class="offer">
         <div class="offer-hero">
@@ -416,6 +602,7 @@ footer.site .credit:hover { text-decoration: underline; }
             <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
             <div><h3>Compra segura</h3><p>Pagamento processado pelo Wiapy.</p></div>
           </div>
+          <a class="btn offer-cta" href="#plano">Ver valor e acessar o pack</a>
         </div>
       </div>
     </div>
@@ -427,7 +614,7 @@ footer.site .credit:hover { text-decoration: underline; }
       <div class="section-head">
         <span class="eyebrow">Perguntas frequentes</span>
         <h2>Dúvidas antes de comprar.</h2>
-        <p>Não encontrou o que procurava? Fale com a gente depois da compra pelo e-mail do pedido.</p>
+        <p>Informações essenciais para comprar com segurança.</p>
       </div>
       <div class="faq">
         <details>
@@ -469,7 +656,7 @@ footer.site .credit:hover { text-decoration: underline; }
             <span class="val" id="price-val">19,90</span>
             <span class="once">pagamento único</span>
           </div>
-          <div id="countdown" class="countdown" aria-live="polite">Promo termina em 22:00:00</div>
+          <div class="purchase-note">Pagamento único · sem mensalidade</div>
         </div>
         <ul>
           <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>200 cards para estudos, redes sociais e trabalhos</li>
@@ -500,51 +687,7 @@ footer.site .credit:hover { text-decoration: underline; }
 <script>
   // Configure aqui o valor e o link de checkout do Wiapy.
   var PRECO = "19,90";
-  var PRECO_NORMAL = "59,90";
   var CHECKOUT_URL = "https://pay.wiapy.com/MiNTCvNSq-PC";
-  var PROMO_DURATION_MS = 22 * 60 * 60 * 1000;
-  var PROMO_KEY = "radiologia-promo-expire";
-
-  function formatCountdown(ms) {
-    var totalSeconds = Math.max(0, Math.ceil(ms / 1000));
-    var hours = Math.floor(totalSeconds / 3600);
-    var minutes = Math.floor((totalSeconds % 3600) / 60);
-    var seconds = totalSeconds % 60;
-    return [hours, minutes, seconds].map(function (n) {
-      return String(n).padStart(2, "0");
-    }).join(":");
-  }
-
-  function getExpiryTimestamp() {
-    try {
-      var saved = Number(localStorage.getItem(PROMO_KEY));
-      if (saved && saved > Date.now()) return saved;
-    } catch (error) {}
-
-    var next = Date.now() + PROMO_DURATION_MS;
-    try {
-      localStorage.setItem(PROMO_KEY, String(next));
-    } catch (error) {}
-    return next;
-  }
-
-  function updatePriceState() {
-    var val = document.getElementById("price-val");
-    var countdown = document.getElementById("countdown");
-    var expiry = getExpiryTimestamp();
-    var remaining = expiry - Date.now();
-
-    if (remaining > 0) {
-      if (val) val.textContent = PRECO;
-      if (countdown) countdown.textContent = "Promo termina em " + formatCountdown(remaining);
-      return true;
-    }
-
-    if (val) val.textContent = PRECO_NORMAL;
-    if (countdown) countdown.textContent = "Preço normal: R$ 59,90";
-    try { localStorage.removeItem(PROMO_KEY); } catch (error) {}
-    return false;
-  }
 
   (function () {
     var val = document.getElementById("price-val");
@@ -559,8 +702,56 @@ footer.site .credit:hover { text-decoration: underline; }
       });
     }
 
-    updatePriceState();
-    window.setInterval(updatePriceState, 1000);
+    var anatomy = document.getElementById("xray-screen");
+    var anatomyTitle = document.getElementById("anatomy-title");
+    var anatomyDescription = document.getElementById("anatomy-description");
+    var anatomyKicker = document.getElementById("anatomy-kicker");
+    var viewerCounter = document.getElementById("viewer-counter");
+    var regions = {
+      skull: {
+        number: "01",
+        label: "CRÂNIO",
+        title: "Ossos do crânio",
+        description: "O crânio forma a estrutura óssea da cabeça. Diferentes incidências radiográficas demonstram suas estruturas sob ângulos distintos."
+      },
+      thorax: {
+        number: "02",
+        label: "TÓRAX",
+        title: "Caixa torácica",
+        description: "Costelas, esterno e clavículas formam a caixa torácica. As costelas se articulam com as vértebras torácicas."
+      },
+      spine: {
+        number: "03",
+        label: "COLUNA",
+        title: "Coluna vertebral",
+        description: "A coluna é formada por vértebras organizadas nas regiões cervical, torácica, lombar, sacral e coccígea."
+      },
+      limbs: {
+        number: "04",
+        label: "MEMBROS",
+        title: "Ossos dos membros",
+        description: "Os membros incluem ossos longos como úmero, rádio, ulna, fêmur, tíbia e fíbula."
+      }
+    };
+    document.querySelectorAll("[data-region]").forEach(function (button) {
+      button.addEventListener("click", function () {
+        var region = regions[button.getAttribute("data-region")];
+        if (!region) return;
+        anatomy.setAttribute("data-active", button.getAttribute("data-region"));
+        anatomyTitle.textContent = region.title;
+        anatomyDescription.textContent = region.description;
+        anatomyKicker.textContent = "ESTRUTURA " + region.number + " · " + region.label;
+        viewerCounter.textContent = region.number + " / 04";
+        document.querySelectorAll("[data-region]").forEach(function (control) {
+          control.setAttribute("aria-pressed", String(control.getAttribute("data-region") === button.getAttribute("data-region")));
+        });
+        anatomy.querySelectorAll("[data-bone]").forEach(function (bone) {
+          bone.classList.toggle("is-active", bone.getAttribute("data-bone") === button.getAttribute("data-region"));
+        });
+      });
+    });
+    var initialRegion = document.querySelector('.anatomy-choice[data-region="thorax"]');
+    if (initialRegion) initialRegion.click();
 
     var track = document.getElementById("track");
     var prev = document.getElementById("prev");
