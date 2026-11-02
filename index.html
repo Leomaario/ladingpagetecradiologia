@@ -13,28 +13,23 @@ img{max-width:100%}
 <title>200 Cards de Radiologia | Pack para estudar e compartilhar</title>
 <meta name="description" content="Estude radiologia com mais clareza. Pack com 200 cards prontos para revisar conteúdos e compartilhar conhecimento. Pagamento único.">
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap">
 <style>
-/* Layout: página branca de venda, hero em duas colunas com pilha de cards reais, carrossel em faixa verde clara, plano único no fim. Tema claro por escolha. */
 :root {
-  --bg: #FCFDFC;
-  --band: #F1F7F3;
+  --bg: #FFFFFF;
+  --band: #F4F6F7;
   --surface: #FFFFFF;
-  --ink: #0D2B1E;
-  --muted: #4A6256;
-  --line: #DCE8E0;
-  --green: #16834A;
-  --green-strong: #0E5A33;
-  --mint: #E7F5EB;
-  --btn-bg: #126C3B;
+  --ink: #172A38;
+  --muted: #596A76;
+  --line: #DCE3E7;
+  --green: #28716D;
+  --green-strong: #205C59;
+  --mint: #EAF2F1;
+  --btn-bg: #245F5D;
   --btn-ink: #FFFFFF;
-  --btn-hover: #0A512D;
-  --deep-bg: #0B3020;
-  --deep-ink: #E8F4EC;
-  --deep-accent: #8BE0AD;
-  --shadow: 0 12px 30px -14px rgba(13, 43, 30, .24), 0 2px 6px rgba(13, 43, 30, .06);
-  --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
-  --font-body: "Figtree", "Segoe UI", system-ui, sans-serif;
+  --btn-hover: #194C4A;
+  --font-display: "DM Sans", "Segoe UI", system-ui, sans-serif;
+  --font-body: "DM Sans", "Segoe UI", system-ui, sans-serif;
   color-scheme: light;
 }
 
@@ -44,8 +39,8 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font-body);
-  font-size: 17px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
 body::before {
@@ -56,7 +51,7 @@ body::before {
   z-index: 30;
   background: var(--bg);
 }
-h1, h2, h3 { font-family: var(--font-display); line-height: 1.08; margin: 0; text-wrap: balance; letter-spacing: -0.02em; }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.16; margin: 0; text-wrap: balance; letter-spacing: -.035em; }
 p { margin: 0; }
 a { color: inherit; }
 :focus-visible { outline: 3px solid var(--green); outline-offset: 3px; border-radius: 6px; }
@@ -68,16 +63,16 @@ a { color: inherit; }
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
 }
-section { padding-block: clamp(56px, 9vw, 104px); }
+section { padding-block: clamp(60px, 8vw, 96px); }
 .eyebrow {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: .12em;
+  letter-spacing: .09em;
   text-transform: uppercase;
   color: var(--green-strong);
 }
 .section-head { display: grid; gap: 14px; max-width: 640px; margin-bottom: clamp(32px, 5vw, 52px); }
-.section-head h2 { font-size: clamp(30px, 4.6vw, 46px); font-weight: 800; }
+.section-head h2 { font-size: clamp(30px, 4.6vw, 46px); font-weight: 600; letter-spacing: -.045em; }
 .section-head p { color: var(--muted); }
 
 /* Botões */
@@ -86,23 +81,20 @@ section { padding-block: clamp(56px, 9vw, 104px); }
   align-items: center;
   justify-content: center;
   gap: 10px;
-  min-height: 52px;
-  padding: 0 28px;
-  border-radius: 999px;
+  min-height: 50px;
+  padding: 0 22px;
+  border-radius: 7px;
   border: 0;
   background: var(--btn-bg);
   color: var(--btn-ink);
-  font: 700 17px/1 var(--font-body);
+  font: 600 15px/1 var(--font-body);
   text-decoration: none;
   cursor: pointer;
-  box-shadow: 0 8px 18px -8px rgba(14, 90, 51, .55);
-  transition: background .2s, transform .2s, box-shadow .2s;
+  transition: background .18s, border-color .18s, color .18s;
 }
-.btn:hover { background: var(--btn-hover); transform: translateY(-2px); box-shadow: 0 12px 24px -8px rgba(14, 90, 51, .5); }
-.btn.ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--line); }
+.btn:hover { background: var(--btn-hover); }
+.btn.ghost { background: transparent; color: var(--ink); border: 1px solid #C9D3D9; box-shadow: none; }
 .btn.ghost:hover { background: var(--mint); }
-.btn.small { min-height: 42px; padding: 0 20px; font-size: 15px; }
-
 /* Cabeçalho */
 .top {
   position: sticky;
@@ -111,22 +103,18 @@ section { padding-block: clamp(56px, 9vw, 104px); }
   background: color-mix(in srgb, var(--bg) 92%, transparent);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
-  box-shadow: 0 4px 18px rgba(13, 43, 30, .04);
 }
-.top::after { content: ""; position: absolute; inset: auto 0 0; height: 2px; background: linear-gradient(90deg, transparent, #8BCDA2 28%, var(--green) 50%, #8BCDA2 72%, transparent); opacity: .65; }
-.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 28px; min-height: 74px; }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 28px; min-height: 72px; }
 .brand { display: inline-flex; align-items: center; gap: 11px; flex: none; text-decoration: none; }
-.brand svg { width: 38px; height: 38px; flex: none; filter: drop-shadow(0 3px 5px rgba(14, 90, 51, .12)); }
+.brand svg { width: 34px; height: 34px; flex: none; }
 .brand-copy { display: grid; gap: 4px; }
-.brand-name { font: 800 19px/1 var(--font-display); letter-spacing: -.035em; }
-.brand-caption { color: var(--muted); font: 700 9px/1 var(--font-body); letter-spacing: .14em; text-transform: uppercase; }
+.brand-name { font: 700 17px/1 var(--font-display); letter-spacing: -.025em; }
+.brand-caption { color: var(--muted); font: 600 9px/1 var(--font-body); letter-spacing: .1em; text-transform: uppercase; }
 .top-nav { display: flex; align-items: center; justify-content: flex-end; gap: clamp(18px, 2.5vw, 36px); margin-left: auto; }
-.top-nav a { position: relative; color: var(--muted); font-size: 15px; font-weight: 600; text-decoration: none; transition: color .2s; }
-.top-nav a::after { content: ""; position: absolute; right: 0; bottom: -7px; left: 0; height: 2px; transform: scaleX(0); transform-origin: left; background: var(--green); transition: transform .2s; }
+.top-nav a { color: var(--muted); font-size: 14px; font-weight: 500; text-decoration: none; transition: color .2s; }
 .top-nav a:hover { color: var(--green-strong); }
-.top-nav a:hover::after { transform: scaleX(1); }
-.top-contact { min-height: 44px; padding-inline: 18px; border-radius: 12px; white-space: nowrap; font-size: 14px; }
-.top-contact svg { width: 17px; height: 17px; flex: none; }
+.top-contact { min-height: 42px; padding-inline: 16px; border-radius: 6px; white-space: nowrap; font-size: 14px; }
+.top-contact svg { display: none; }
 
 /* Imagens dos cards */
 .shot {
@@ -134,182 +122,166 @@ section { padding-block: clamp(56px, 9vw, 104px); }
   width: 100%;
   height: auto;
   aspect-ratio: 900 / 1278;
-  border-radius: 5% / 3.5%;
+  border-radius: 3px;
   background: #fff;
-  box-shadow: var(--shadow);
+  border: 1px solid #D6DEE3;
 }
 
 /* Hero */
-.hero { position: relative; isolation: isolate; overflow: hidden; padding-block: clamp(56px, 8vw, 104px); background: linear-gradient(115deg, #F5FAF6 0%, #FFFFFF 55%, #EDF7F0 100%); }
-.hero::before { content: ""; position: absolute; z-index: -1; width: min(58vw, 760px); aspect-ratio: 1; right: -15%; top: -40%; border-radius: 50%; background: radial-gradient(circle, rgba(111, 202, 143, .18), rgba(111, 202, 143, 0) 68%); pointer-events: none; }
-.hero .wrap { position: relative; display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(32px, 5vw, 64px); align-items: center; }
-.hero-copy { display: grid; gap: 24px; min-width: 0; animation: rise-in .7s both; }
-.hero h1 { font-size: clamp(40px, 6.4vw, 70px); font-weight: 800; }
-.hero h1 em { font-style: normal; color: var(--green); }
-.hero .lead { font-size: clamp(18px, 2vw, 21px); color: var(--muted); max-width: 520px; }
+.hero { position: relative; overflow: hidden; padding-block: clamp(56px, 7vw, 84px); background: #F5F7F8; }
+.hero .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(34px, 6vw, 76px); align-items: center; }
+.hero-copy { display: grid; gap: 22px; min-width: 0; }
+.hero h1 { max-width: 590px; font-size: clamp(39px, 5.3vw, 62px); font-weight: 600; letter-spacing: -.05em; }
+.hero h1 em { font-style: normal; color: var(--green-strong); }
+.hero .lead { font-size: clamp(17px, 1.7vw, 19px); color: var(--muted); max-width: 510px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
-.assure { display: flex; flex-wrap: wrap; gap: 8px 22px; padding: 0; margin: 4px 0 0; list-style: none; font-size: 15px; color: var(--muted); }
+.assure { display: flex; flex-wrap: wrap; gap: 8px 20px; padding: 0; margin: 4px 0 0; list-style: none; font-size: 13px; color: var(--muted); }
 .assure li { display: flex; align-items: center; gap: 8px; }
-.assure svg { width: 18px; height: 18px; color: var(--green); flex: none; }
+.assure li::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--green); }
+.assure svg { width: 15px; height: 15px; color: var(--green); flex: none; }
 
-.stack { position: relative; height: 470px; min-width: 0; animation: rise-in .85s .1s both; }
-.stack::before { content: ""; position: absolute; width: 76%; aspect-ratio: 1; left: 12%; top: 10%; border-radius: 50%; background: radial-gradient(circle, rgba(89, 175, 118, .22), rgba(89, 175, 118, 0) 70%); filter: blur(8px); }
-.stack .shot { position: absolute; top: 24px; left: calc(50% - 115px); width: 230px; }
-.stack .shot { border: 5px solid rgba(255,255,255,.92); box-shadow: 0 24px 48px -16px rgba(13, 43, 30, .34), 0 5px 14px rgba(13, 43, 30, .12); }
-.stack .shot:nth-child(1) { transform: translateX(-84px) rotate(-8deg); }
-.stack .shot:nth-child(2) { transform: translateX(84px) rotate(7deg) translateY(34px); }
-.stack .shot:nth-child(3) { transform: translateY(-8px); z-index: 2; }
+.stack { position: relative; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); align-items: center; gap: 18px; min-width: 0; min-height: 450px; margin: 0; padding: 58px 25px 54px; border: 1px solid #D8E0E4; border-radius: 4px; background: #E9EEF0; }
+.hero-visual-label { position: absolute; top: 20px; left: 24px; color: #536673; font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.hero-feature { display: grid; justify-items: center; gap: 11px; min-width: 0; margin: 0; }
+.hero-feature .shot { width: min(100%, 240px); box-shadow: 0 10px 24px rgba(22, 42, 56, .13); }
+.hero-feature figcaption, .hero-card-list figcaption { color: #425461; font-size: 11px; font-weight: 600; line-height: 1.4; text-align: center; }
+.hero-card-list { display: grid; gap: 16px; min-width: 0; }
+.hero-card-list figure { display: grid; justify-items: center; gap: 7px; margin: 0; }
+.hero-card-list .shot { width: min(100%, 120px); box-shadow: 0 5px 14px rgba(22, 42, 56, .1); }
+.hero-visual-footer { position: absolute; right: 24px; bottom: 18px; color: #687984; font-size: 11px; }
 
 /* O que você vai querer */
-.uses { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.use { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 30px; display: grid; gap: 16px; align-content: start; min-width: 0; box-shadow: 0 2px 8px rgba(13, 43, 30, .025); transition: transform .25s, box-shadow .25s, border-color .25s; }
-.use:hover { transform: translateY(-5px); border-color: #B8D8C2; box-shadow: var(--shadow); }
-.use .ico { width: 52px; height: 52px; border-radius: 14px; background: var(--mint); color: var(--green-strong); display: grid; place-items: center; transition: transform .25s, background .25s; }
-.use:hover .ico { transform: scale(1.06); background: #D8EFDF; }
-.use .ico svg { width: 26px; height: 26px; }
-.use h3 { font-size: 26px; font-weight: 700; }
-.use p { color: var(--muted); font-size: 16px; }
-.use ul { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 10px; font-size: 16px; }
+.uses { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.use { background: transparent; border: 0; border-right: 1px solid var(--line); border-radius: 0; padding: 26px 28px 26px 0; display: grid; gap: 12px; align-content: start; min-width: 0; }
+.use + .use { padding-left: 28px; }
+.use:last-child { border-right: 0; }
+.use:hover { transform: none; box-shadow: none; }
+.use .ico { width: auto; height: auto; border-radius: 0; background: transparent; color: var(--green-strong); display: block; }
+.use:hover .ico { transform: none; background: transparent; }
+.use .ico svg { width: 24px; height: 24px; }
+.use h3 { font-size: 21px; font-weight: 600; }
+.use p { color: var(--muted); font-size: 14px; }
+.use ul { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 8px; font-size: 14px; }
 .use li { display: flex; gap: 10px; align-items: flex-start; }
 .use li svg { width: 18px; height: 18px; color: var(--green); margin-top: 4px; flex: none; }
 
-/* Visor anatômico interativo */
-.anatomy-band { position: relative; overflow: hidden; background: linear-gradient(180deg, #F1F7F3, #FCFDFC 78%); }
+.anatomy-band { position: relative; overflow: hidden; background: #F4F6F7; }
 .anatomy-band .section-head { max-width: 700px; }
-.anatomy-viewer { display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; border: 1px solid rgba(144, 196, 163, .32); border-radius: 26px; background: #0A1826; box-shadow: 0 28px 64px -32px rgba(8, 32, 48, .55); }
-.xray-screen { position: relative; display: grid; min-height: 500px; place-items: center; overflow: hidden; background: radial-gradient(ellipse at 50% 46%, #1B3C4B 0, #102637 45%, #091723 100%); }
-.xray-screen::before { content: ""; position: absolute; inset: 0; opacity: .2; background-image: linear-gradient(rgba(147, 222, 242, .1) 1px, transparent 1px), linear-gradient(90deg, rgba(147, 222, 242, .1) 1px, transparent 1px); background-size: 32px 32px; mask-image: linear-gradient(transparent, #000 18%, #000 82%, transparent); pointer-events: none; }
-.xray-screen::after { content: ""; position: absolute; inset: 18px; border: 1px solid rgba(180, 226, 239, .11); border-radius: 16px; pointer-events: none; }
-.viewer-status { position: absolute; z-index: 2; top: 28px; left: 30px; display: inline-flex; align-items: center; gap: 9px; color: #D9EAF0; font: 700 10px/1 var(--font-body); letter-spacing: .14em; }
-.viewer-status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #7CE2B0; box-shadow: 0 0 12px rgba(124, 226, 176, .8); }
-.viewer-counter { position: absolute; z-index: 2; top: 26px; right: 30px; color: #9CB6C1; font: 600 11px/1 var(--font-body); letter-spacing: .12em; }
+.anatomy-viewer { display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; border: 1px solid var(--line); border-radius: 4px; background: #FFFFFF; }
+.xray-screen { position: relative; display: grid; min-height: 500px; place-items: center; overflow: hidden; background: #EFF3F5; }
+.xray-screen::before { content: ""; position: absolute; inset: 0; opacity: .22; background-image: linear-gradient(rgba(63, 91, 108, .12) 1px, transparent 1px), linear-gradient(90deg, rgba(63, 91, 108, .12) 1px, transparent 1px); background-size: 36px 36px; mask-image: linear-gradient(transparent, #000 14%, #000 86%, transparent); pointer-events: none; }
+.xray-screen::after { content: ""; position: absolute; inset: 18px; border: 1px solid rgba(79, 104, 119, .18); pointer-events: none; }
+.viewer-status { position: absolute; z-index: 2; top: 28px; left: 30px; display: inline-flex; align-items: center; gap: 9px; color: #455966; font: 700 10px/1 var(--font-body); letter-spacing: .1em; }
+.viewer-status::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #547B78; }
+.viewer-counter { position: absolute; z-index: 2; top: 27px; right: 30px; color: #62737E; font: 600 11px/1 var(--font-body); letter-spacing: .08em; }
 .xray-stage { position: relative; width: min(100%, 370px); height: 460px; margin-top: 26px; }
 .skeleton-art { display: block; width: 100%; height: 100%; overflow: visible; }
-.skeleton-art [data-bone] { fill: none; stroke: #B5E5F0; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; opacity: .82; transition: opacity .25s, filter .25s, stroke .25s; }
+.skeleton-art [data-bone] { fill: none; stroke: #748B96; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; opacity: .76; transition: opacity .2s, stroke .2s; }
 .skeleton-art [data-bone="spine"] { stroke-width: 2.4; }
 .skeleton-art [data-bone="limbs"] { stroke-width: 3.2; }
 .skeleton-art [data-bone="skull"] { fill: rgba(181, 229, 240, .08); }
 .skeleton-art [data-bone="skull"] path:not(:first-child) { fill: none; }
 .skeleton-art [data-bone="skull"] circle { fill: rgba(181, 229, 240, .18); }
 .skeleton-art [data-bone="pelvis"] { fill: rgba(181, 229, 240, .06); }
-.skeleton-art [data-bone].is-active { stroke: #D6FAFF; opacity: 1; filter: drop-shadow(0 0 5px rgba(118, 223, 246, .78)); }
+.skeleton-art [data-bone].is-active { stroke: #245F5D; opacity: 1; }
 .skeleton-art [data-bone="skull"].is-active,
-.skeleton-art [data-bone="pelvis"].is-active { fill: rgba(118, 223, 246, .16); }
+.skeleton-art [data-bone="pelvis"].is-active { fill: rgba(36, 95, 93, .12); }
 .xray-screen[data-active="skull"] .skeleton-art [data-bone]:not([data-bone="skull"]),
 .xray-screen[data-active="thorax"] .skeleton-art [data-bone]:not([data-bone="thorax"]),
 .xray-screen[data-active="spine"] .skeleton-art [data-bone]:not([data-bone="spine"]),
-.xray-screen[data-active="limbs"] .skeleton-art [data-bone]:not([data-bone="limbs"]) { opacity: .34; }
-.anatomy-marker { position: absolute; z-index: 3; display: flex; align-items: center; gap: 7px; padding: 0; border: 0; background: none; color: #E8F8FB; font: 700 11px/1 var(--font-body); cursor: pointer; }
-.anatomy-marker::before { content: ""; width: 12px; height: 12px; flex: none; border: 2px solid #D6FAFF; border-radius: 50%; background: rgba(91, 207, 231, .35); box-shadow: 0 0 0 5px rgba(91, 207, 231, .12), 0 0 15px rgba(91, 207, 231, .7); transition: transform .2s, background .2s; }
-.anatomy-marker:hover::before, .anatomy-marker[aria-pressed="true"]::before { transform: scale(1.2); background: #8AE7F6; }
-.anatomy-marker span { padding: 7px 9px; border: 1px solid rgba(205, 239, 247, .18); border-radius: 999px; background: rgba(8, 24, 37, .82); }
+.xray-screen[data-active="limbs"] .skeleton-art [data-bone]:not([data-bone="limbs"]) { opacity: .36; }
+.anatomy-marker { position: absolute; z-index: 3; display: flex; align-items: center; gap: 7px; padding: 4px; border: 0; background: none; color: #253A48; font: 600 11px/1 var(--font-body); cursor: pointer; }
+.anatomy-marker::before { content: ""; width: 9px; height: 9px; flex: none; border: 2px solid #FFFFFF; border-radius: 50%; background: #597F7D; box-shadow: 0 0 0 1px #597F7D; transition: transform .2s, background .2s; }
+.anatomy-marker:hover::before, .anatomy-marker[aria-pressed="true"]::before { transform: scale(1.15); background: #245F5D; }
+.anatomy-marker span { padding: 5px 7px; border: 1px solid rgba(79, 104, 119, .2); border-radius: 2px; background: rgba(255, 255, 255, .92); }
 .marker-skull { top: 17%; left: 57%; }
 .marker-thorax { top: 38%; left: 58%; }
 .marker-spine { top: 54%; left: 57%; }
 .marker-limbs { top: 77%; left: 54%; }
-.anatomy-panel { display: flex; flex-direction: column; justify-content: center; padding: clamp(26px, 4vw, 48px); color: #E9F3F4; }
-.anatomy-panel .eyebrow { color: #89D9E8; font-size: 11px; }
-.anatomy-panel h3 { margin-top: 12px; font-size: clamp(28px, 3.5vw, 38px); }
-.anatomy-panel > p { margin-top: 12px; color: #ADC2C8; font-size: 15px; }
+.anatomy-panel { display: flex; flex-direction: column; justify-content: center; padding: clamp(26px, 4vw, 48px); color: var(--ink); }
+.anatomy-panel .eyebrow { color: var(--green-strong); font-size: 11px; }
+.anatomy-panel h3 { margin-top: 12px; font-size: clamp(27px, 3.2vw, 36px); font-weight: 600; }
+.anatomy-panel > p { margin-top: 12px; color: var(--muted); font-size: 14px; }
 .anatomy-choices { display: grid; gap: 8px; margin-top: 25px; }
-.anatomy-choice { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 48px; padding: 8px 12px; border: 1px solid rgba(182, 219, 228, .13); border-radius: 12px; background: rgba(255, 255, 255, .035); color: #B8CBD0; font: 600 14px/1 var(--font-body); text-align: left; cursor: pointer; transition: border-color .2s, background .2s, color .2s; }
-.anatomy-choice:hover, .anatomy-choice[aria-pressed="true"] { border-color: rgba(137, 217, 232, .52); background: rgba(73, 153, 170, .16); color: #F3FCFD; }
-.anatomy-choice .choice-number { color: #7DA5B1; font: 700 11px/1 var(--font-body); letter-spacing: .06em; }
-.anatomy-choice svg { width: 16px; height: 16px; margin-left: auto; color: #85D6E5; }
-.anatomy-note { margin-top: 20px; color: #7E9AA4; font-size: 12px; line-height: 1.5; }
-.anatomy-cta { margin-top: 20px; align-self: flex-start; background: #75D5A0; color: #092A1A; box-shadow: 0 8px 22px -10px rgba(117, 213, 160, .7); }
-.anatomy-cta:hover { background: #96E8B9; }
+.anatomy-choice { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 46px; padding: 8px 10px; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: transparent; color: var(--ink); font: 500 14px/1 var(--font-body); text-align: left; cursor: pointer; transition: border-color .2s, color .2s; }
+.anatomy-choice:hover, .anatomy-choice[aria-pressed="true"] { border-bottom-color: var(--green); background: transparent; color: var(--green-strong); }
+.anatomy-choice .choice-number { color: #758590; font: 600 11px/1 var(--font-body); letter-spacing: .06em; }
+.anatomy-choice svg { width: 15px; height: 15px; margin-left: auto; color: #68827F; }
+.anatomy-note { margin-top: 18px; color: #687984; font-size: 12px; line-height: 1.5; }
+.anatomy-cta { margin-top: 18px; align-self: flex-start; }
 
 /* Carrossel */
-.carousel-band { background: var(--band); }
+.carousel-band { background: #FFFFFF; }
 .carousel-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: clamp(28px, 4vw, 44px); }
 .carousel-head .section-head { margin-bottom: 0; }
 .arrows { display: flex; gap: 10px; }
-.arrow { width: 52px; height: 52px; border-radius: 50%; border: 1.5px solid var(--green-strong); background: var(--surface); color: var(--green-strong); display: grid; place-items: center; cursor: pointer; transition: background .2s, color .2s, opacity .2s; }
+.arrow { width: 42px; height: 42px; border-radius: 4px; border: 1px solid #C9D3D9; background: var(--surface); color: var(--ink); display: grid; place-items: center; cursor: pointer; transition: background .2s, color .2s, opacity .2s; }
 .arrow:hover:not(:disabled) { background: var(--green-strong); color: var(--surface); }
 .arrow:disabled { opacity: .35; cursor: default; }
 .arrow svg { width: 22px; height: 22px; }
 .track {
   display: flex;
-  gap: 22px;
+  gap: 18px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  padding: 10px 6px 30px;
+  padding: 10px 6px 24px;
   margin-inline: -6px;
   scrollbar-width: thin;
   scrollbar-color: var(--green) transparent;
 }
-.slide { flex: 0 0 min(320px, 78vw); scroll-snap-align: start; padding: 0; margin: 0; border: 0; background: none; cursor: zoom-in; border-radius: 5% / 3.5%; }
-.slide .shot { box-shadow: var(--shadow); transition: transform .25s, box-shadow .25s; }
-.slide:hover .shot { transform: translateY(-5px) scale(1.01); box-shadow: 0 22px 40px -16px rgba(13, 43, 30, .32); }
+.slide { flex: 0 0 min(280px, 78vw); scroll-snap-align: start; padding: 0; margin: 0; border: 0; background: none; cursor: zoom-in; border-radius: 3px; }
+.slide .shot { box-shadow: 0 4px 14px rgba(22, 42, 56, .08); transition: border-color .2s; }
+.slide:hover .shot { border-color: #9BAFB8; }
 .note { color: var(--muted); font-size: 15px; margin-top: 4px; }
 
 /* Visualização ampliada */
-.lightbox { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); background: rgba(8, 28, 18, .86); }
-.lightbox img { max-width: min(560px, 100%); max-height: 100%; width: auto; height: auto; border-radius: 3%; box-shadow: 0 24px 60px rgba(0, 0, 0, .5); }
-.lightbox button { position: absolute; top: max(14px, env(safe-area-inset-top, 0px)); right: max(14px, env(safe-area-inset-right, 0px)); width: 48px; height: 48px; border-radius: 50%; border: 0; background: #fff; color: var(--green-strong); display: grid; place-items: center; cursor: pointer; }
+.lightbox { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); background: rgba(17, 35, 46, .92); }
+.lightbox img { max-width: min(560px, 100%); max-height: 100%; width: auto; height: auto; border-radius: 3px; box-shadow: 0 12px 36px rgba(0, 0, 0, .28); }
+.lightbox button { position: absolute; top: max(14px, env(safe-area-inset-top, 0px)); right: max(14px, env(safe-area-inset-right, 0px)); width: 44px; height: 44px; border-radius: 4px; border: 1px solid rgba(255,255,255,.5); background: #fff; color: var(--ink); display: grid; place-items: center; cursor: pointer; }
 .lightbox button svg { width: 22px; height: 22px; }
 
 /* Ofertas */
-.offer { display: grid; grid-template-columns: .8fr 1.2fr; gap: 20px; align-items: stretch; }
-.offer-hero { background: radial-gradient(circle at 85% 12%, rgba(116, 206, 149, .22), transparent 35%), linear-gradient(145deg, #10452D, var(--deep-bg) 75%); color: var(--deep-ink); border-radius: 24px; padding: clamp(28px, 4vw, 44px); display: grid; align-content: space-between; gap: 40px; min-width: 0; box-shadow: 0 20px 40px -20px rgba(11, 48, 32, .52); }
-.offer-hero .n { font: 800 clamp(96px, 16vw, 168px)/.85 var(--font-display); letter-spacing: -0.05em; color: var(--deep-accent); }
-.offer-hero p { font-size: 20px; max-width: 280px; opacity: .92; }
-.offer-list { display: grid; gap: 14px; min-width: 0; align-content: center; }
-.offer-item { display: grid; grid-template-columns: 48px 1fr; gap: 18px; align-items: start; background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 22px 24px; transition: transform .2s, box-shadow .2s, border-color .2s; }
-.offer-item:hover { transform: translateX(4px); border-color: #B8D8C2; box-shadow: var(--shadow); }
-.offer-item .ico { width: 48px; height: 48px; border-radius: 14px; background: var(--mint); color: var(--green-strong); display: grid; place-items: center; }
+.offer { display: grid; grid-template-columns: .8fr 1.2fr; gap: 36px; align-items: stretch; }
+.offer-hero { background: #F1F4F5; color: var(--ink); border: 1px solid var(--line); border-radius: 4px; padding: clamp(28px, 4vw, 44px); display: grid; align-content: space-between; gap: 30px; min-width: 0; }
+.offer-hero .n { font: 600 clamp(76px, 12vw, 130px)/.9 var(--font-display); letter-spacing: -.06em; color: var(--green-strong); }
+.offer-hero p { font-size: 17px; max-width: 280px; color: var(--muted); }
+.offer-list { display: grid; gap: 0; min-width: 0; align-content: center; }
+.offer-item { display: grid; grid-template-columns: 34px 1fr; gap: 16px; align-items: start; background: transparent; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; padding: 18px 0; transition: border-color .2s; }
+.offer-item:hover { transform: none; border-color: #AAB9C1; box-shadow: none; }
+.offer-item .ico { width: 34px; height: 34px; border-radius: 0; background: transparent; color: var(--green-strong); display: grid; place-items: center; }
 .offer-item .ico svg { width: 24px; height: 24px; }
-.offer-item h3 { font-size: 21px; font-weight: 700; margin-bottom: 4px; }
-.offer-item p { color: var(--muted); font-size: 16px; }
-.offer-cta { justify-self: start; margin-top: 6px; }
+.offer-item h3 { font-size: 17px; font-weight: 600; margin-bottom: 4px; }
+.offer-item p { color: var(--muted); font-size: 14px; }
+.offer-cta { justify-self: start; margin-top: 18px; }
 
 /* FAQ */
-.faq-band { background: var(--band); }
+.faq-band { background: #F4F6F7; }
 .faq-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(28px, 5vw, 72px); align-items: start; }
 .faq-grid .section-head { margin-bottom: 0; }
 .faq { display: grid; gap: 0; min-width: 0; }
 .faq details { border-bottom: 1px solid var(--line); }
 .faq details:first-child { border-top: 1px solid var(--line); }
-.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 22px 0; font: 700 19px/1.3 var(--font-display); letter-spacing: -0.01em; }
+.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 20px 0; font: 600 16px/1.4 var(--font-display); letter-spacing: -.01em; }
 .faq summary::-webkit-details-marker { display: none; }
-.faq summary::after { content: ""; flex: none; width: 12px; height: 12px; border: solid var(--green); border-width: 0 2.5px 2.5px 0; transform: rotate(45deg); transition: transform .2s; margin-right: 6px; }
+.faq summary::after { content: ""; flex: none; width: 9px; height: 9px; border: solid var(--green); border-width: 0 1.5px 1.5px 0; transform: rotate(45deg); transition: transform .2s; margin-right: 6px; }
 .faq details[open] summary::after { transform: rotate(-135deg); }
-.faq details p { color: var(--muted); padding: 0 40px 24px 0; }
+.faq details p { color: var(--muted); padding: 0 40px 20px 0; font-size: 14px; }
 
 /* Plano */
-.plan-wrap { display: grid; justify-items: center; gap: 36px; }
+.plan-wrap { display: grid; justify-items: center; gap: 30px; }
 .plan-wrap .section-head { text-align: center; justify-items: center; margin-bottom: 0; }
-.plan { position: relative; overflow: hidden; width: 100%; max-width: 460px; background: var(--surface); border: 1px solid #B9D8C3; border-radius: 28px; padding: clamp(28px, 5vw, 40px); display: grid; gap: 24px; box-shadow: 0 24px 60px -30px rgba(14, 90, 51, .42), 0 2px 8px rgba(13, 43, 30, .05); }
-.plan::before { content: ""; position: absolute; top: 0; inset-inline: 0; height: 5px; background: linear-gradient(90deg, #0E5A33, #59B879, #B5E5C3); }
+.plan { position: relative; overflow: hidden; width: 100%; max-width: 460px; background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: clamp(28px, 5vw, 40px); display: grid; gap: 22px; box-shadow: 0 6px 20px rgba(22, 42, 56, .06); }
 .plan-top { display: grid; gap: 6px; }
-.plan-name { font: 700 14px/1 var(--font-body); letter-spacing: .12em; text-transform: uppercase; color: var(--green-strong); }
+.plan-name { font: 600 12px/1 var(--font-body); letter-spacing: .1em; text-transform: uppercase; color: var(--green-strong); }
 .price { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; font-variant-numeric: tabular-nums; }
-.price .cur { font: 700 24px/1 var(--font-display); }
-.price .val { font: 800 clamp(56px, 12vw, 76px)/1 var(--font-display); letter-spacing: -0.04em; }
+.price .cur { font: 600 22px/1 var(--font-display); }
+.price .val { font: 600 clamp(52px, 10vw, 68px)/1 var(--font-display); letter-spacing: -.05em; }
 .price .once { color: var(--muted); font-size: 16px; }
 .plan ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
 .plan li { display: flex; gap: 12px; align-items: flex-start; }
 .plan li svg { width: 20px; height: 20px; color: var(--green); flex: none; margin-top: 3px; }
 .plan .btn { width: 100%; min-height: 58px; font-size: 18px; }
-.purchase-note {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: var(--mint);
-  border: 1px solid #CFEAD8;
-  color: var(--green-strong);
-  font: 700 13px/1.2 var(--font-body);
-}
 .secure { text-align: center; color: var(--muted); font-size: 14px; line-height: 1.5; }
-
-@keyframes rise-in {
-  from { opacity: 0; transform: translateY(18px); }
-  to { opacity: 1; transform: translateY(0); }
-}
 
 footer.site { padding-block: 36px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
 footer.site .wrap { display: flex; justify-content: space-between; gap: 8px 24px; flex-wrap: wrap; }
@@ -318,8 +290,10 @@ footer.site .credit:hover { text-decoration: underline; }
 
 @media (max-width: 900px) {
   .hero .wrap { grid-template-columns: 1fr; }
-  .stack { height: 430px; order: -1; }
-  .uses { grid-template-columns: 1fr; }
+  .stack { min-height: 430px; }
+  .uses { grid-template-columns: repeat(2, 1fr); }
+  .use:nth-child(2) { border-right: 0; }
+  .use:last-child { grid-column: 1 / -1; border-top: 1px solid var(--line); padding-left: 0; }
   .anatomy-viewer { grid-template-columns: 1fr; }
   .xray-screen { min-height: 450px; }
   .xray-stage { height: 420px; }
@@ -330,10 +304,12 @@ footer.site .credit:hover { text-decoration: underline; }
 }
 @media (max-width: 480px) {
   body { font-size: 16px; }
-  .stack { height: 360px; }
-  .stack .shot { width: 188px; left: calc(50% - 94px); }
-  .stack .shot:nth-child(1) { transform: translateX(-68px) rotate(-8deg); }
-  .stack .shot:nth-child(2) { transform: translateX(68px) rotate(7deg) translateY(28px); }
+  .stack { min-height: 340px; padding: 48px 14px 42px; gap: 10px; }
+  .hero-feature .shot { width: min(100%, 190px); }
+  .hero-card-list { gap: 12px; }
+  .hero-card-list .shot { width: min(100%, 94px); }
+  .hero-visual-label { top: 16px; left: 14px; font-size: 9px; }
+  .hero-visual-footer { right: 14px; bottom: 14px; font-size: 9px; }
   .hero-actions .btn { width: 100%; }
   .top .wrap { min-height: 66px; gap: 10px; }
   .brand { gap: 8px; }
@@ -342,6 +318,9 @@ footer.site .credit:hover { text-decoration: underline; }
   .brand-caption { font-size: 8px; }
   .top-contact { min-height: 40px; padding-inline: 11px; gap: 6px; font-size: 12px; }
   .top-contact svg { width: 15px; height: 15px; }
+  .uses { grid-template-columns: 1fr; }
+  .use, .use + .use, .use:last-child { grid-column: auto; padding: 20px 0; border-right: 0; border-top: 1px solid var(--line); }
+  .use:first-child { border-top: 0; }
   .xray-screen { min-height: 390px; }
   .xray-stage { height: 360px; }
   .viewer-status { top: 25px; left: 24px; font-size: 9px; }
@@ -365,7 +344,6 @@ footer.site .credit:hover { text-decoration: underline; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .btn, .arrow, .faq summary::after, .use, .use .ico, .offer-item, .slide .shot, .skeleton-art [data-bone], .anatomy-marker::before, .anatomy-choice { transition: none; }
-  .hero-copy, .stack { animation: none; }
 }
 </style>
 
@@ -391,9 +369,8 @@ footer.site .credit:hover { text-decoration: underline; }
       <a href="#ofertas">O pack</a>
       <a href="#faq">Dúvidas</a>
     </nav>
-    <a class="btn top-contact" href="https://www.instagram.com/souzaalink/" target="_blank" rel="noopener" aria-label="Fale no Instagram">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg>
-      Fale no Instagram
+    <a class="btn top-contact" href="#ofertas">
+      Ver o pack
     </a>
   </div>
 </header>
@@ -403,24 +380,37 @@ footer.site .credit:hover { text-decoration: underline; }
   <section class="hero">
     <div class="wrap">
       <div class="hero-copy">
-        <span class="eyebrow">Material visual para técnico em radiologia</span>
-        <h1>200 cards para <em>estudar radiologia.</em></h1>
-        <p class="lead">Revise conteúdos com cards prontos para acessar e compartilhar. Compra única, acesso após o pagamento.</p>
+        <span class="eyebrow">Material de apoio · Técnico em Radiologia</span>
+        <h1>Radiologia em cards de <em>revisão.</em></h1>
+        <p class="lead">Um material visual para revisar conceitos técnicos de radiologia, organizado em 200 cards objetivos.</p>
         <div class="hero-actions">
-          <a class="btn js-checkout" href="#plano">Quero acessar os 200 cards</a>
-          <a class="btn ghost" href="#exemplos">Ver prévia</a>
+          <a class="btn" href="#plano">Ver conteúdo e valor</a>
+          <a class="btn ghost" href="#exemplos">Explorar amostras</a>
         </div>
         <ul class="assure">
-          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Pagamento único</li>
-          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Compra segura pelo Wiapy</li>
-          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Acesso após o pagamento</li>
+          <li>200 cards</li>
+          <li>Pagamento único</li>
+          <li>Acesso digital após a confirmação</li>
         </ul>
       </div>
 
-      <div class="stack" aria-hidden="true">
-        <img class="shot" src="cards/card-10.webp" alt="" width="900" height="1278">
-        <img class="shot" src="cards/card-19.webp" alt="" width="900" height="1278">
-        <img class="shot" src="cards/card-12.webp" alt="" width="900" height="1278">
+      <div class="stack" role="group" aria-label="Amostra de cards de radiologia">
+        <span class="hero-visual-label">Prévia do material · seleção de cards</span>
+        <figure class="hero-feature">
+          <img class="shot" src="cards/card-12.webp" alt="Card sobre formação da imagem radiográfica" width="900" height="1278">
+          <figcaption>Formação da imagem radiográfica</figcaption>
+        </figure>
+        <div class="hero-card-list" aria-label="Outros temas do material">
+          <figure>
+            <img class="shot" src="cards/card-10.webp" alt="Card sobre segurança do paciente" width="900" height="1278">
+            <figcaption>Segurança do paciente</figcaption>
+          </figure>
+          <figure>
+            <img class="shot" src="cards/card-13.webp" alt="Card sobre atenuação da radiação" width="900" height="1278">
+            <figcaption>Atenuação da radiação</figcaption>
+          </figure>
+        </div>
+        <span class="hero-visual-footer">Imagens reais dos cards incluídos</span>
       </div>
     </div>
   </section>
@@ -429,39 +419,39 @@ footer.site .credit:hover { text-decoration: underline; }
   <section id="usos" style="padding-top: 0;">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow">O que você vai querer</span>
-        <h2>Um pack, três jeitos de usar todos os dias.</h2>
-        <p>Cada card resolve uma tarefa pequena e frequente. Você abre, ajusta o texto e usa.</p>
+        <span class="eyebrow">Conteúdo do material</span>
+        <h2>Temas técnicos organizados para revisão.</h2>
+        <p>Amostras do conteúdo disponível nos cards.</p>
       </div>
       <div class="uses">
         <article class="use">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 5.5v16"/><path d="M9 8h7M9 12h5"/></svg></div>
-          <h3>Estudos</h3>
-          <p>Condense a matéria em cards que cabem na memória.</p>
+          <h3>Fundamentos e proteção</h3>
+          <p>Conceitos essenciais para revisar os princípios da radiologia.</p>
           <ul>
-            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Revisar conteúdo antes da prova</li>
-            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Resumir um assunto por card</li>
-            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Montar material para o grupo de estudo</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Radiação ionizante</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Segurança do paciente</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Proteção radiológica</li>
           </ul>
         </article>
         <article class="use">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></svg></div>
-          <h3>Redes sociais</h3>
-          <p>Conteúdo com visual consistente, sem abrir um arquivo em branco.</p>
+          <h3>Formação da imagem</h3>
+          <p>Fatores que influenciam a produção e a leitura da imagem radiográfica.</p>
           <ul>
-            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Publicar dicas e carrosséis</li>
-            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Manter a frequência de postagens</li>
-            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Deixar o perfil com identidade própria</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Atenuação da radiação</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Fatores de exposição</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Densidade e contraste</li>
           </ul>
         </article>
         <article class="use">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="3"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7"/><path d="M3 13h18"/></svg></div>
-          <h3>Trabalhos</h3>
-          <p>Ideias claras para reuniões, projetos e apresentações.</p>
+          <h3>Qualidade da imagem</h3>
+          <p>Parâmetros relacionados à avaliação da imagem radiográfica.</p>
           <ul>
-            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Organizar reuniões e tarefas</li>
-            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Apresentar projetos de forma objetiva</li>
-            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Entregar com aparência profissional</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Resolução espacial</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Ruído na imagem</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Controle de qualidade</li>
           </ul>
         </article>
       </div>
@@ -471,13 +461,13 @@ footer.site .credit:hover { text-decoration: underline; }
   <section class="anatomy-band" id="anatomia">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow">Explore a radiologia</span>
-        <h2>Um jeito mais visual de aprender anatomia.</h2>
-        <p>Toque em uma região do esqueleto e descubra alguns conceitos básicos.</p>
+        <span class="eyebrow">Atlas interativo</span>
+        <h2>Explore regiões anatômicas.</h2>
+        <p>Selecione uma região para consultar uma breve descrição anatômica.</p>
       </div>
       <div class="anatomy-viewer">
         <div class="xray-screen" id="xray-screen" data-active="thorax">
-          <span class="viewer-status">VISUALIZADOR ANATÔMICO</span>
+          <span class="viewer-status">ESQUEMA ANATÔMICO</span>
           <span class="viewer-counter" id="viewer-counter">02 / 04</span>
           <div class="xray-stage">
             <svg class="skeleton-art" viewBox="0 0 300 500" role="img" aria-labelledby="skeleton-title skeleton-description">
@@ -485,8 +475,7 @@ footer.site .credit:hover { text-decoration: underline; }
               <desc id="skeleton-description">Representação esquemática de um esqueleto com pontos interativos no crânio, tórax, coluna e membros.</desc>
               <g data-bone="skull">
                 <path d="M150 31c-24 0-39 18-39 43v18c0 14 8 24 20 29l5 16h28l5-16c12-5 20-15 20-29V74c0-25-15-43-39-43Z"/>
-                <path d="M126 81c2-7 8-11 15-10M174 81c-2-7-8-11-15-10M148 81l-5 19 7 3M132 108c10 7 26 7 36 0"/>
-                <circle cx="133" cy="82" r="4"/><circle cx="167" cy="82" r="4"/>
+                <path d="M150 35v72M115 72c11 5 22 7 35 7s24-2 35-7"/>
                 <path d="M140 123v8m20-8v8"/>
               </g>
               <g data-bone="thorax">
@@ -535,7 +524,7 @@ footer.site .credit:hover { text-decoration: underline; }
             <button class="anatomy-choice" type="button" data-region="limbs" aria-controls="anatomy-description" aria-pressed="false"><span class="choice-number">04</span>Membros<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
           </div>
           <p class="anatomy-note">Ilustração esquemática para fins educativos; não representa um exame diagnóstico.</p>
-          <a class="btn anatomy-cta js-checkout" href="#plano">Quero ver os 200 cards</a>
+          <a class="btn anatomy-cta" href="#plano">Ver conteúdo e valor</a>
         </div>
       </div>
     </div>
@@ -645,8 +634,8 @@ footer.site .credit:hover { text-decoration: underline; }
   <section id="plano">
     <div class="wrap plan-wrap">
       <div class="section-head">
-        <span class="eyebrow">Plano</span>
-        <h2>Comece hoje com os 200 cards.</h2>
+        <span class="eyebrow">Acesso ao material</span>
+        <h2>Conteúdo e valor.</h2>
       </div>
       <div class="plan">
         <div class="plan-top">
@@ -656,7 +645,6 @@ footer.site .credit:hover { text-decoration: underline; }
             <span class="val" id="price-val">19,90</span>
             <span class="once">pagamento único</span>
           </div>
-          <div class="purchase-note">Pagamento único · sem mensalidade</div>
         </div>
         <ul>
           <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>200 cards para estudos, redes sociais e trabalhos</li>
@@ -664,7 +652,7 @@ footer.site .credit:hover { text-decoration: underline; }
           <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Sem mensalidade e sem renovação</li>
         </ul>
         <a class="btn js-checkout" id="checkout" href="#plano">Comprar agora</a>
-        <p class="secure">Pagamento seguro processado pelo Wiapy.</p>
+        <p class="secure">Pagamento processado pelo Wiapy.</p>
       </div>
     </div>
   </section>
@@ -672,7 +660,7 @@ footer.site .credit:hover { text-decoration: underline; }
 
 <footer class="site">
   <div class="wrap">
-    <span>Pack 200 Cards · Pagamentos processados pelo Wiapy</span>
+    <span>Material de apoio para fins educativos. Não substitui protocolos ou formação profissional.</span>
     <span>Site produzido por <a class="credit" href="https://www.instagram.com/souzaalink/" target="_blank" rel="noopener">@souzaalink</a></span>
   </div>
 </footer>
