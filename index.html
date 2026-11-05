@@ -706,6 +706,16 @@ src="https://www.facebook.com/tr?id=3792942624177983&ev=PageView&noscript=1"
         a.setAttribute("rel", "noopener");
       });
     }
+    document.querySelectorAll(".js-checkout").forEach(function (button) {
+      button.addEventListener("click", function () {
+        if (typeof fbq === "function") {
+          fbq("track", "InitiateCheckout", {
+            value: 19.90,
+            currency: "BRL"
+          });
+        }
+      });
+    });
 
     var anatomy = document.getElementById("xray-screen");
     var anatomyTitle = document.getElementById("anatomy-title");
