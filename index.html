@@ -10,8 +10,8 @@ body{margin:0}
 img{max-width:100%}
 [hidden]{display:none!important}
 </style>
-<title>200 Cards de Radiologia | Pack para estudar e compartilhar</title>
-<meta name="description" content="Estude radiologia com mais clareza. Pack com 200 cards prontos para revisar conteúdos e compartilhar conhecimento. Pagamento único.">
+<title>200 Cards de Radiologia por R$ 15,00 | Pack de estudos</title>
+<meta name="description" content="Revise radiologia com 200 cards prontos para estudar e compartilhar. Pack completo por R$ 15,00, pagamento único e acesso digital após a confirmação.">
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap">
 <style>
@@ -131,6 +131,9 @@ section { padding-block: clamp(60px, 8vw, 96px); }
 .hero { position: relative; overflow: hidden; padding-block: clamp(56px, 7vw, 84px); background: #F5F7F8; }
 .hero .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(34px, 6vw, 76px); align-items: center; }
 .hero-copy { display: grid; gap: 22px; min-width: 0; }
+.deal-pill { display: inline-flex; align-items: center; gap: 9px; width: fit-content; padding: 8px 14px; border: 1px solid #E8D8A5; border-radius: 999px; background: #FFF8E5; color: #604B16; font-size: 13px; line-height: 1.3; }
+.deal-pill strong { font-weight: 700; }
+.deal-dot { width: 8px; height: 8px; flex: none; border-radius: 50%; background: #C3982E; }
 .hero h1 { max-width: 590px; font-size: clamp(39px, 5.3vw, 62px); font-weight: 600; letter-spacing: -.05em; }
 .hero h1 em { font-style: normal; color: var(--green-strong); }
 .hero .lead { font-size: clamp(17px, 1.7vw, 19px); color: var(--muted); max-width: 510px; }
@@ -242,9 +245,11 @@ section { padding-block: clamp(60px, 8vw, 96px); }
 
 /* Ofertas */
 .offer { display: grid; grid-template-columns: .8fr 1.2fr; gap: 36px; align-items: stretch; }
-.offer-hero { background: #F1F4F5; color: var(--ink); border: 1px solid var(--line); border-radius: 4px; padding: clamp(28px, 4vw, 44px); display: grid; align-content: space-between; gap: 30px; min-width: 0; }
+.offer-hero { background: linear-gradient(145deg, #F0F6F5, #E5EFED); color: var(--ink); border: 1px solid #D3E1DF; border-radius: 4px; padding: clamp(28px, 4vw, 44px); display: grid; align-content: space-between; gap: 22px; min-width: 0; }
+.offer-label { color: var(--green-strong); font-size: 12px; font-weight: 700; letter-spacing: .1em; }
 .offer-hero .n { font: 600 clamp(76px, 12vw, 130px)/.9 var(--font-display); letter-spacing: -.06em; color: var(--green-strong); }
 .offer-hero p { font-size: 17px; max-width: 280px; color: var(--muted); }
+.offer-price { width: fit-content; padding: 9px 13px; border-radius: 4px; background: #FFFFFF; color: var(--green-strong); font-size: 14px; font-weight: 700; }
 .offer-list { display: grid; gap: 0; min-width: 0; align-content: center; }
 .offer-item { display: grid; grid-template-columns: 34px 1fr; gap: 16px; align-items: start; background: transparent; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; padding: 18px 0; transition: border-color .2s; }
 .offer-item:hover { transform: none; border-color: #AAB9C1; box-shadow: none; }
@@ -270,7 +275,8 @@ section { padding-block: clamp(60px, 8vw, 96px); }
 /* Plano */
 .plan-wrap { display: grid; justify-items: center; gap: 30px; }
 .plan-wrap .section-head { text-align: center; justify-items: center; margin-bottom: 0; }
-.plan { position: relative; overflow: hidden; width: 100%; max-width: 460px; background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: clamp(28px, 5vw, 40px); display: grid; gap: 22px; box-shadow: 0 6px 20px rgba(22, 42, 56, .06); }
+.plan { position: relative; overflow: hidden; width: 100%; max-width: 460px; background: var(--surface); border: 1px solid #B7D1CE; border-radius: 4px; padding: clamp(32px, 5vw, 44px) clamp(28px, 5vw, 40px) clamp(28px, 5vw, 40px); display: grid; gap: 22px; box-shadow: 0 12px 34px rgba(22, 42, 56, .1); }
+.plan::before { content: ""; position: absolute; inset: 0 0 auto; height: 5px; background: var(--green); }
 .plan-top { display: grid; gap: 6px; }
 .plan-name { font: 600 12px/1 var(--font-body); letter-spacing: .1em; text-transform: uppercase; color: var(--green-strong); }
 .price { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; font-variant-numeric: tabular-nums; }
@@ -386,8 +392,8 @@ src="https://www.facebook.com/tr?id=3792942624177983&ev=PageView&noscript=1"
       <a href="#ofertas">O pack</a>
       <a href="#faq">Dúvidas</a>
     </nav>
-    <a class="btn top-contact" href="#ofertas">
-      Ver o pack
+    <a class="btn top-contact js-checkout" href="#plano">
+      Comprar por R$ 15,00
     </a>
   </div>
 </header>
@@ -398,15 +404,16 @@ src="https://www.facebook.com/tr?id=3792942624177983&ev=PageView&noscript=1"
     <div class="wrap">
       <div class="hero-copy">
         <span class="eyebrow">Material de apoio · Técnico em Radiologia</span>
-        <h1>Radiologia em cards de <em>revisão.</em></h1>
+        <span class="deal-pill"><span class="deal-dot" aria-hidden="true"></span>PACK COMPLETO <strong>R$ 15,00</strong></span>
+        <h1>Revise radiologia com <em>200 cards prontos.</em></h1>
         <p class="lead">Um material visual para revisar conceitos técnicos de radiologia, organizado em 200 cards objetivos.</p>
         <div class="hero-actions">
-          <a class="btn" href="#plano">Ver conteúdo e valor</a>
+          <a class="btn js-checkout" href="#plano">Comprar pack por R$ 15,00</a>
           <a class="btn ghost" href="#exemplos">Explorar amostras</a>
         </div>
         <ul class="assure">
-          <li>200 cards</li>
-          <li>Pagamento único</li>
+          <li>200 cards prontos</li>
+          <li>Sem mensalidade</li>
           <li>Acesso digital após a confirmação</li>
         </ul>
       </div>
@@ -592,8 +599,10 @@ src="https://www.facebook.com/tr?id=3792942624177983&ev=PageView&noscript=1"
       </div>
       <div class="offer">
         <div class="offer-hero">
+          <span class="offer-label">PACK COMPLETO</span>
           <span class="n">200</span>
           <p>cards prontos para estudo, conteúdo e trabalho.</p>
+          <span class="offer-price">Por R$ 15,00 · pagamento único</span>
         </div>
         <div class="offer-list">
           <div class="offer-item">
@@ -608,7 +617,7 @@ src="https://www.facebook.com/tr?id=3792942624177983&ev=PageView&noscript=1"
             <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
             <div><h3>Compra segura</h3><p>Pagamento processado pelo Wiapy.</p></div>
           </div>
-          <a class="btn offer-cta" href="#plano">Ver valor e acessar o pack</a>
+          <a class="btn offer-cta js-checkout" href="#plano">Quero os 200 cards por R$ 15,00</a>
         </div>
       </div>
     </div>
@@ -668,7 +677,7 @@ src="https://www.facebook.com/tr?id=3792942624177983&ev=PageView&noscript=1"
           <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Acesso enviado por e-mail após o pagamento</li>
           <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Sem mensalidade e sem renovação</li>
         </ul>
-        <a class="btn js-checkout" id="checkout" href="#plano">Comprar agora</a>
+        <a class="btn js-checkout" id="checkout" href="#plano">Comprar pack por R$ 15,00</a>
         <p class="secure">Pagamento processado pelo Wiapy.</p>
       </div>
     </div>
