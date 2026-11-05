@@ -659,7 +659,7 @@ src="https://www.facebook.com/tr?id=3792942624177983&ev=PageView&noscript=1"
           <span class="plan-name">Pack completo</span>
           <div class="price">
             <span class="cur">R$</span>
-            <span class="val" id="price-val">19,90</span>
+            <span class="val" id="price-val">15,00</span>
             <span class="once">pagamento único</span>
           </div>
         </div>
@@ -691,7 +691,7 @@ src="https://www.facebook.com/tr?id=3792942624177983&ev=PageView&noscript=1"
 
 <script>
   // Configure aqui o valor e o link de checkout do Wiapy.
-  var PRECO = "19,90";
+  var PRECO = "15,00";
   var CHECKOUT_URL = "https://pay.wiapy.com/MiNTCvNSq-PC";
 
   (function () {
@@ -710,7 +710,7 @@ src="https://www.facebook.com/tr?id=3792942624177983&ev=PageView&noscript=1"
       button.addEventListener("click", function () {
         if (typeof fbq === "function") {
           fbq("track", "InitiateCheckout", {
-            value: 19.90,
+            value: 15.00,
             currency: "BRL"
           });
         }
